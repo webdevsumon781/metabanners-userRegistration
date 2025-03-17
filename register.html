@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Metabanners</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <!-- stylesheet here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="loginPage">
+    <main>
+        <!-- header start -->
+        <header class="header" id="header">
+            <!-- desktop header start -->
+            <div class="desktopHeader innerHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 logoAndMenuArea">
+                            <div class="innerLogo">
+                                <a href="#" class="logo"><img src="assets/images/Metabanners-logo-white-letters.png"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 buttonArea">
+                            <p>Have an account?</p>
+                            <a href="/login.html" class="btn getStartBtn">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- desktop header close -->
+
+            <!-- Mobile header start -->
+            <div class="mobileHeader innerHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="mhLeft d-flex justify-content-start">
+                                <a href="#" class="backBtn">Back</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="mhMiddle">
+                                <div class="innerLogo d-flex justify-content-center">
+                                    <a href="index.html" class="logo"><img
+                                            src="assets/images/Metabanners-logo-white-letters.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="mhRight">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile header close -->
+        </header>
+        <!-- header close -->
+        <!-- ******************************************************** -->
+        <!--login page hero start -->
+        <div class="loginHero content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12">
+                        <div class="heroLeft">
+                            <div class="loginFormArea signUpFormArea">
+                                <div class="innerLoginForm innerSignUpForm">
+                                    <h1 class="formTitle text-center">Sign up to <br> Metabanners</h1>
+                                    <div class="tabArea text-center">
+                                        <div class="innerTab">
+                                            <button class="reg_individualTab tabActive">Individual</button>
+                                            <button class="reg_businessTab">Business</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Individual form close -->
+                                    <form action="#" method="post" id="reg_individualForm" class="loginForm signUpForm">
+                                        <div class="form-group">
+                                            <label for="fName_individual" id="fNameLabel_individual">First name*</label>
+                                            <input type="text" class="fName" id="fName_individual"
+                                                placeholder="First name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lName_individual" id="lNameLabel_individual">Last name*</label>
+                                            <input type="text" class="lName_individual" id="lName_individual"
+                                                placeholder="Last name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_individualEmail"
+                                                id="reg_individualEmailLabel">Individual Email*</label>
+                                            <input type="email" id="reg_individualEmail" name="email"
+                                                placeholder="Individual email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="reg_individualPhone" id="reg_individualPhoneLabel">Phone</label>
+                                            <input type="tel" id="reg_individualPhone" name="reg_individualPhone"
+                                                placeholder="Phone">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="reg_createPassword" id="reg_createPasswordlabel">Create
+                                                password*</label>
+                                            <div style="position: relative;">
+                                                <input type="password" id="reg_createPassword" name="password"
+                                                    placeholder="Create password">
+                                                <img src="assets/images/view.png" alt="Show Password"
+                                                    class="toggle-password" data-target="reg_createPassword"
+                                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; cursor: pointer;">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="reg_confirmPassword" id="reg_confirmPasswordlabel">Confirm
+                                                password*</label>
+                                            <div style="position: relative;">
+                                                <input type="password" id="reg_confirmPassword"
+                                                    name="reg_confirmPassword" placeholder="Confirm password">
+                                                <img src="assets/images/view.png" alt="Show Password"
+                                                    class="toggle-password" data-target="reg_confirmPassword"
+                                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; cursor: pointer;">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="promoCode_individual" id="promoCode_individualLabel">Promo
+                                                Code</label>
+                                            <input type="text" class="promoCode_individual" id="promoCode_individual"
+                                                placeholder="Promo Code">
+                                        </div>
+                                        <div class="form-group checkBoxArea">
+                                            <input type="checkbox" id="iAgree_individual" name="iAgree_individual">
+                                            <label for="iAgree_individual">I agree to <a href="#">terms & service</a>
+                                                and <a href="#">privacy policy</a></label>
+                                        </div>
+                                        <span class="iAgreeErrorMessage individualErrorMessage">You must agree to the
+                                            terms</span>
+                                        <input type="submit" class="btn submitBtn" value="Sign Up"
+                                            onclick="reg_individualFormValidation()">
+                                    </form>
+                                    <!-- Individual form start -->
+
+                                    <!-- Business form start -->
+                                    <form action="#" method="post" id="reg_businessForm" class="loginForm signUpForm">
+                                        <div class="form-group">
+                                            <label for="fName_business" id="fNameLabel_business">First name*</label>
+                                            <input type="text" class="fName" id="fName_business"
+                                                placeholder="First name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lName_business" id="lNameLabel_business">Last name*</label>
+                                            <input type="text" class="lName_business" id="lName_business"
+                                                placeholder="Last name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_businessEmail" id="reg_businessEmailLabel">Business Email*</label>
+                                            <input type="email" id="reg_businessEmail" name="email" placeholder="Business email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="reg_businessPhone" id="reg_businessPhoneLabel">Phone</label>
+                                            <input type="tel" id="reg_businessPhone" name="reg_businessPhone"
+                                                placeholder="Phone">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="reg_createPassword_business"
+                                                id="reg_createPasswordlabel_business">Create password*</label>
+                                            <div style="position: relative;">
+                                                <input type="password" id="reg_createPassword_business"
+                                                    name="createPassword_business" placeholder="Create password">
+                                                <img src="assets/images/view.png" alt="Show Password"
+                                                    class="toggle_password_business"
+                                                    data-target="reg_createPassword_business"
+                                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; cursor: pointer;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_confirmPassword_business"
+                                                id="reg_createPassword_business">Confirm password*</label>
+                                            <div style="position: relative;">
+                                                <input type="password" id="reg_confirmPassword_business"
+                                                    name="reg_confirmPassword_business"
+                                                    placeholder="Confirm password">
+                                                <img src="assets/images/view.png" alt="Show Password"
+                                                    class="toggle_password_business"
+                                                    data-target="reg_confirmPassword_business"
+                                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; cursor: pointer;">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="promoCode_business" id="promoCode_businessLabel_business">Promo
+                                                Code</label>
+                                            <input type="text" class="promoCode_business" id="promoCode_business"
+                                                placeholder="Promo Code">
+                                        </div>
+                                        <div class="form-group checkBoxArea">
+                                            <input type="checkbox" id="iAgree_business" name="iAgree_business">
+                                            <label for="iAgree_business">I agree to <a href="#">terms & service</a> and
+                                                <a href="#">privacy policy</a></label>
+                                        </div>
+
+                                        <span class="iAgreeErrorMessage businessErrorMessage">You must agree to the
+                                            terms</span>
+
+                                        <input type="submit" class="btn submitBtn" value="Sign Up"
+                                            onclick="reg_businessLoginFormValidation()">
+                                    </form>
+                                    <!-- Business form close -->
+                                    <a href="/login.html" class="text-center haveAnAccount">Have an account? Log in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="heroRight">
+                            <h1>How we help you save</h1>
+                            <p>Introducing Metabanners Impact! How much have our clients saved in Metabanners fees? What
+                                were our clients’ favourite ETFs last year? Check out the full breakdown below.</p>
+                            <a href="#" class="btn heroRightBtn">Find out more</a>
+                            <img src="assets/images/how-we-help-you-save@1x.b74ca4b88fe1a54c2256.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--login page hero close -->
+        <!-- ********************************************************* -->
+        <!-- Footer Start -->
+        <footer>
+            <!-- Desktopo footer start -->
+            <div class="innerFooter">
+                <div class="footerTop">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-12">
+                                <div class="ftLeft">
+                                    <div class="iconBox">
+                                        <!-- <img src="assets/images/svg/circle-two-icon.svg" alt=""> -->
+                                        <p>Our support is available Monday-Friday 5:30am to 11:00pm
+                                            and Saturday-Sunday 7:00am to 10:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                                <div class="ftRight d-flex justify-content-end">
+                                    <a href="#" class="btn ftBtn">Need help? Visit our Help Centre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footerBottom">
+                    <div class="container">
+                        <div class="innerFb">
+                            <div class="downloadArea text-center">
+                                <a href="#"><img src="assets/images/home/app-store-gray.2f7157c0.png" alt=""></a>
+                                <a href="#"><img src="assets/images/home/google-play-gray.bb1b83e9.png" alt=""></a>
+                            </div>
+                            <h6 class="text-center">Whenever you invest, your capital is at risk</h6>
+                            <p class="ftext text-center">This could mean the value of your investments goes down as well
+                                as
+                                up.<br>
+                                <a href="#">Understand more about investment risk.</a>
+                            </p>
+                            <p class="secondDesc text-center">Metabanners is the trading name of Metabanners Limited.
+                                Metabanners (UK)
+                                Limited is Authorised and Regulated by the Financial Conduct Authority, [FRN 801128].
+                                Metabanners is incorporated in the UK with company number 10438231 and is registered at
+                                Lawford
+                                House, Albert Place, London, United Kingdom, N3 1QA.
+                                <br><br>
+                                Metabanners does not provide investment advice. If you are unsure of the risk or
+                                suitability of
+                                an investment, you should seek advice from an independent financial adviser..</a>
+                            </p>
+
+                            <h5 class="copyRight text-center">&copy; Metabanners Limited 2025. All rights reserved.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Desktop Footer close -->
+            <!-- ********************************************************** -->
+        </footer>
+        <!-- Footer close -->
+    </main>
+
+    <!-- Javascript here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+
+</html>

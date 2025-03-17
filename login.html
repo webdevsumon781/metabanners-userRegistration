@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Metabanners</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <!-- stylesheet here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="loginPage">
+    <main>
+        <!-- header start -->
+        <header class="header" id="header">
+            <!-- desktop header start -->
+            <div class="desktopHeader innerHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 logoAndMenuArea">
+                            <div class="innerLogo">
+                                <a href="#" class="logo"><img src="assets/images/Metabanners-logo-white-letters.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 buttonArea">
+                            <p>Don’t have an account?</p>
+                            <a href="/register.html" class="btn getStartBtn">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- desktop header close -->
+
+            <!-- Mobile header start -->
+            <div class="mobileHeader innerHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="mhLeft d-flex justify-content-start">
+                                <a href="#" class="backBtn">Back</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="mhMiddle">
+                                <div class="innerLogo d-flex justify-content-center">
+                                    <a href="index.html" class="logo"><img src="assets/images/Metabanners-logo-white-letters.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="mhRight">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile header close -->
+        </header>
+        <!-- header close -->
+        <!-- ******************************************************** -->
+        <!--login page hero start -->
+        <div class="loginHero content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12">
+                        <div class="heroLeft">
+                            <div class="loginFormArea">
+                                <div class="innerLoginForm">
+                                    <h1 class="formTitle text-center">Log in to <br> Metabanners</h1>
+                                    <div class="tabArea text-center">
+                                        <div class="innerTab">
+                                            <button class="individualTab tabActive">Individual</button>
+                                            <button class="businessTab">Business</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Individual form close -->
+                                    <form action="#" method="post" id="individualForm" class="loginForm">
+                                        <div class="form-group">
+                                            <label for="individualEmail" id="individualEmailLabel">Your email</label>
+                                            <input type="text" id="individualEmail" name="email">
+                                        </div>
+                                        <div class="form-group passwordArea">
+                                            <label for="individualPassword"
+                                                id="individualPasswordLabel">Password</label>
+                                            <input type="password" id="individualPassword" name="password">
+                                        </div>
+                                        <a href="#" class="forgot-password">Forgot password?</a>
+                                        <div class="form-group checkBoxArea">
+                                            <input type="checkbox" id="updates" name="updates">
+                                            <label for="updates">Receive Metabanners updates</label>
+                                        </div>
+                                        <button type="button" class="btn submitBtn"
+                                            onclick="individualFormValidation()">Login</button>
+                                    </form>
+                                    <!-- Individual form start -->
+
+                                    <!-- Business form start -->
+                                    <form action="#" method="post" id="businessForm" class="loginForm">
+                                        <div class="form-group">
+                                            <label for="businessEmail" id="businessEmailLabel">Business Email</label>
+                                            <input type="text" id="businessEmail" name="businessEmail">
+                                        </div>
+                                        <div class="form-group passwordArea">
+                                            <label for="businessPassword" id="businessPasswordLabel">Password</label>
+                                            <input type="password" id="businessPassword" name="password">
+                                        </div>
+                                        <a href="#" class="forgot-password">Forgot password?</a>
+                                        <div class="form-group checkBoxArea">
+                                            <input type="checkbox" id="updates" name="updates">
+                                            <label for="updates">Receive Metabanners updates</label>
+                                        </div>
+                                        <button type="button" class="btn submitBtn"
+                                            onclick="businessLoginFormValidation()">Login</button>
+                                    </form>
+                                    <!-- Business form close -->
+                                    <a href="/register.html" class="text-center haveAnAccount">Don’t have an account? Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="heroRight">
+                            <h1>How we help you save</h1>
+                            <p>Introducing Metabanners Impact! How much have our clients saved in Metabanners fees? What
+                                were our clients’ favourite ETFs last year? Check out the full breakdown below.</p>
+                            <a href="#" class="btn heroRightBtn">Find out more</a>
+                            <img src="assets/images/how-we-help-you-save@1x.b74ca4b88fe1a54c2256.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--login page hero close -->
+        <!-- ********************************************************* -->
+        <!-- Footer Start -->
+        <footer>
+            <!-- Desktopo footer start -->
+            <div class="innerFooter">
+                <div class="footerTop">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-12">
+                                <div class="ftLeft">
+                                    <div class="iconBox">
+                                        <!-- <img src="assets/images/svg/circle-two-icon.svg" alt=""> -->
+                                        <p>Our support is available Monday-Friday 5:30am to 11:00pm
+                                            and Saturday-Sunday 7:00am to 10:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                                <div class="ftRight d-flex justify-content-end">
+                                    <a href="#" class="btn ftBtn">Need help? Visit our Help Centre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footerBottom">
+                    <div class="container">
+                        <div class="innerFb">
+                            <div class="downloadArea text-center">
+                                <a href="#"><img src="assets/images/home/app-store-gray.2f7157c0.png" alt=""></a>
+                                <a href="#"><img src="assets/images/home/google-play-gray.bb1b83e9.png" alt=""></a>
+                            </div>
+                            <h6 class="text-center">Whenever you invest, your capital is at risk</h6>
+                            <p class="ftext text-center">This could mean the value of your investments goes down as well
+                                as
+                                up.<br>
+                                <a href="#">Understand more about investment risk.</a>
+                            </p>
+                            <p class="secondDesc text-center">Metabanners is the trading name of Metabanners Limited.
+                                Metabanners (UK)
+                                Limited is Authorised and Regulated by the Financial Conduct Authority, [FRN 801128].
+                                Metabanners is incorporated in the UK with company number 10438231 and is registered at
+                                Lawford
+                                House, Albert Place, London, United Kingdom, N3 1QA.
+                                <br><br>
+                                Metabanners does not provide investment advice. If you are unsure of the risk or
+                                suitability of
+                                an investment, you should seek advice from an independent financial adviser..</a>
+                            </p>
+
+                            <h5 class="copyRight text-center">&copy; Metabanners Limited 2025. All rights reserved.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Desktop Footer close -->
+            <!-- ********************************************************** -->
+        </footer>
+        <!-- Footer close -->
+    </main>
+
+    <!-- Javascript here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

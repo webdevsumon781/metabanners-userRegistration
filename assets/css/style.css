@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('/assets/fonts/Segoe\ UI.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('/assets/fonts/Segoe\ UI\ Italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('/assets/fonts/Segoe\ UI\ Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('/assets/fonts/Segoe\ UI\ Bold\ Italic.woff') format('woff');
+}
+
+/* Global css start */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Custom Color */
+    --primary-color: #191919;
+    --secondary-color: #4fbe0c;
+    --text-color: #000000e6;
+    --accent-color: #0082FA;
+    --btn-hover-color: #0064E0;
+    --btn-hover-color-2: #5858F6;
+    --second-btn-hover-color: #5B9E33;
+    --menu-color: #777;
+    --white-color: #fff;
+    --submenu-hover-color: #ff4136;
+    /* Custom Fonts */
+    --poppins: "Poppins", serif;
+    --roboto: "Roboto", serif;
+    --Segoe-UI-regular: "Segoe UI Regular";
+    --Segoe-UI-regular-italic: "Segoe UI Italic";
+    --Segoe-UI-bold: "Segoe UI Bold";
+    --Segoe-UI-bold-italic: "Segoe UI Bold Italic";
+
+    /* Typography */
+    --paragraph-font-size: 16px;
+    --h1-font-size: 48px;
+    --h2-font-size: 40px;
+    --h3-font-size: 24px;
+    --h4-font-size: 22px;
+    --h5-font-size: 18px;
+    --h6-font-size: 14px;
+
+    --btn-font-size: 18px;
+
+    /* layout */
+    --container-width: 1248px;
+}
+
+
+
+.container {
+    padding: 0px 20px !important;
+    max-width: 1208px !important;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--accent-color);
+    cursor: pointer !important;
+}
+p{
+    margin: 0;
+}
+
+
+.btn {
+    padding: 17px 30px;
+    font-size: var(--btn-font-size);
+    border-radius: 7px;
+    font-family: 'Segoe UI', sans-serif;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    background-image: linear-gradient(180deg, var(--accent-color) 0, var(--btn-hover-color));
+    box-shadow: inset 0 -1px 0 0 rgba(11, 11, 216, .6)
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-color);
+}
+
+.btn.second-btn {
+    background-color: var(--secondary-color);
+    padding: 15px 30px;
+    font-size: var(--btn-font-size);
+    border-radius: 7px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.btn.second-btn:hover {
+    background-color: var(--second-btn-hover-color);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    font-size: var(--h6-font-size);
+}
+
+p {
+    font-size: var(--paragraph-font-size);
+    font-family: var(--roboto);
+}
+
+/* Global css close */
+
+
+
+
+
+/* global slider css close */
+
+
+/* Header start */
+
+/* *****************Desktop header start*********************** */
+header {
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 10000;
+}
+
+header .desktopHeader {
+    padding: 0px 20px;
+    width: 1248px;
+}
+
+.desktopHeader .logoAndMenuArea {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.desktopHeader .buttonArea {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+
+.desktopHeader .buttonArea a.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 102px !important;
+    height: 32px;
+    color: var(--white-color) !important;
+    font-size: 14px;
+    font-family: var(--Segoe-UI-regular);
+    padding: 0;
+    line-height: 1.7;
+    border-radius: 6px;
+}
+
+.desktopHeader .buttonArea a.btn:hover {
+    background: #1818F2;
+}
+
+
+
+/* for header sticky */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 12px 0;
+    transition: top 0.3s;
+    z-index: 999;
+    background-color: #fff;
+    isolation: isolate;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15);
+}
+.hidden {
+    top: -103px; /* Adjust this value if the header height changes */
+}
+/* *****************Desktop header close************************ */
+/* Header close */
+
+/* ********************Login page start********************* */
+#loginPage header,
+#ProductType header{
+    background: #1C1C1C;
+    color: #fff9;;
+}
+#loginPage .desktopHeader .innerLogo .logo img,
+#ProductType .desktopHeader .innerLogo .logo img  {
+    max-width: 110px;
+    width: 100%;
+}
+#loginPage .buttonArea{
+    display: flex;
+    align-content: center;
+}
+#loginPage .buttonArea p{
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff9;
+}
+#loginPage .buttonArea .getStartBtn{
+    color: var(--primary-color);
+    background: var(--accent-color);
+}
+#loginPage .buttonArea .getStartBtn:hover{
+    background-color: var(--btn-hover-color);
+}
+/* Login hero start */
+#loginPage .loginHero{
+    background: var(--btn-hover-color);
+    padding: 140px 0px 40px;
+    overflow: hidden;
+}
+.loginFormArea,
+.signUpFormArea{
+    box-shadow: 0 -4px 10px 0 #0000000a, 0 0 4px 0 #0000000a, 0 12px 32px 0 #0000001a;
+    background-color: #1C1C1C;
+    border-color: var(--background-border);
+    padding: 48px 72px 20px;
+    border: .0625rem solid var(--background-border);
+    border-radius: .325rem;
+    box-sizing: border-box;
+    display: block;
+    max-width: 448px;
+    width: 100%;
+}
+
+.loginFormArea .innerLoginForm{
+    width: 100%;
+}
+.loginFormArea .innerLoginForm .formTitle{
+    font-size: 32px;
+    color: #ffffffe6;
+    font-family: 'Segoe UI', sans-serif;
+}
+.innerLoginForm .tabArea{
+    display: flex;
+    justify-content: center;
+}
+.innerLoginForm .tabArea .innerTab{
+    background-color: rgb(33 33 33 / 85%);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    width: 100%;
+    margin: 20px 0px 30px;
+}
+.innerLoginForm .tabArea .innerTab button{
+    background: transparent;
+    border: none;
+    border: none !important;
+    padding: 12px 24px;
+    color: rgb(255 255 255 / 70%);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.loginForm form{
+    font-family: 'Segoe UI', sans-serif;
+}
+.loginForm .form-group {
+    margin-bottom: 15px;
+}
+.loginForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffffe6;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+    margin-bottom: -2px;
+}
+.loginForm .error {
+    color: red;
+}
+.loginForm input[type="text"], input[type="password"], input[type="email"], input[type="tel"]  {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder{
+    font-size: 12px;
+}
+.loginForm input[type="checkbox"] {
+    margin-right: 10px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.loginForm .passwordArea{
+    margin: 0;
+}
+.loginForm .forgot-password {
+    color: rgb(118, 148, 255);
+    text-decoration: none;
+    font-size: 12px;
+}
+.loginForm .forgot-password:hover {
+    color: var(--submenu-hover-color);
+}
+.loginForm .checkBoxArea{
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.checkBoxArea label{
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    margin: -1px 0px 1px;
+}
+.checkBoxArea label a{
+    color: rgb(118, 148, 255);
+}
+.checkBoxArea label a:hover{
+    color: var(--submenu-hover-color);
+}
+.loginForm button.submitBtn,
+.signUpForm button.submitBtn {
+    color: var(--primary-color) !important;
+    width: 100% !important;
+    padding: 12px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: none;
+    margin: 5px 0px 5px;
+}
+input.btn.submitBtn {
+    color: var(--primary-color) !important;
+    width: 100% !important;
+    max-width: 1100px;
+    padding: 12px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: none;
+    margin: 15px 0px 5px;
+}
+.signUpForm button.submitBtn {
+    margin: 25px 0px 5px;
+}
+
+.loginForm button.submitBtn:hover {
+    background-color: var(--btn-hover-color) !important;
+    background-image: none;
+}
+.haveAnAccount {
+    color: rgb(118, 148, 255) !important;
+    text-align: center !important;
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.haveAnAccount:hover{
+    color: var(--submenu-hover-color) !important;
+}
+
+
+.tabActive{
+    background: rgb(45, 48, 50) !important;
+}
+
+.individualForm{
+    display: block;
+}
+#businessForm{
+    display: none;
+}
+.reg_individualForm{
+    display: block;
+}
+#reg_businessForm{
+    display: none;
+}
+/* iAgreeErrorMessage start */
+.iAgreeErrorMessage{
+    font-size: 12px;
+    color: rgb(255, 130, 122);
+    display: none;
+}
+/* login hero right */
+.heroRight{
+    padding: 72px 0px 72px 45px;
+}
+.heroRight h1{
+    color: var(--white-color);
+    font-family: var(--poppins);
+    font-weight: 700;
+    font-size: var(--h1-font-size);
+}
+.heroRight p{
+    color: #C7C7FC;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    padding: 5px 0px 5px;
+}
+.heroRight .heroRightBtn{
+    border: 1px solid var(--white-color);
+    padding: 6px 30px !important;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: none;
+    margin: 20px 0px 20px;
+    border-radius: 6px;
+    background: transparent !important;
+}
+/* Login hero close */
+/* footer start */
+#loginPage footer,
+#ProductType footer{
+    background: #1C1C1C;
+    color: #fff9;
+}
+#loginPage footer .footerTop,
+#ProductType footer .footerTop{
+    background-color: #252525;
+    border-top: 1px solid rgb(138 138 138 / 45%);
+    border-bottom: 1px solid rgb(138 138 138 / 45%);
+    padding: 10px;
+}
+#loginPage .ftLeft .iconBox p,
+#ProductType .ftLeft .iconBox p {
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 380px;
+    width: 100%;
+}
+#loginPage footer .footerTop .btn,
+#ProductType footer .footerTop .btn{
+    font-size: 16px;
+}
+#loginPage .footerBottom .innerFb h6,
+#ProductType .footerBottom .innerFb h6 {
+    color: #fff;
+}
+#loginPage .footerBottom .innerFb p.ftext,
+#ProductType .footerBottom .innerFb p.ftext {
+    color: #fff;
+    font-size: 12px;
+}
+#loginPage .footerBottom .innerFb p a,
+#ProductType .footerBottom .innerFb p a{
+    color: rgb(118, 148, 255);
+}
+#loginPage .footerBottom .innerFb h5,
+#ProductType .footerBottom .innerFb h5{
+    color:rgb(255 255 255 / 90%) !important;
+    font-size: 12px !important;
+}
+.footerBottom {
+    padding: 30px 0px;
+}
+.footerBottom .innerFb p {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 722px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    color: #4f4f4f;
+    margin: 30px 0px;
+}
+.footerBottom .innerFb p.secondDesc {
+    color: #9b9b9b;
+}
+.mhMiddle img {
+    width: 65px;
+}
+/* login hero start */
+/* ********************Login page close********************* */
+/* **************************************************** */
+
+/* Responsive start************************************* */
+@media (min-width:1024px) {
+    .desktopHeader {
+        display: block;
+    }
+
+    .mobileHeader {
+        display: none;
+    }
+
+}
+
+
+/* Tablet responsive start */
+
+/* tablet responsive close */
+
+/* mini tablet responsive start */
+@media (max-width:1023px) {
+    :root {
+        /* Typography */
+        --paragraph-font-size: 16px;
+        --h1-font-size: 32px;
+        --h2-font-size: 30px;
+        --h3-font-size: 20px;
+        --h4-font-size: 18px;
+        --h5-font-size: 16px;
+        --h6-font-size: 14px;
+        --btn-font-size: 16px;
+        /* layout */
+    }
+    .container {
+        max-width: 1023px !important;
+    }
+    .desktopHeader {
+        display: none;
+    }
+    /* ******************************************************************* */
+
+    .mobileHeader {
+        display: block;
+        max-width: 1023px !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+    /* header close for mobile and tablet */
+
+    /* Login page start */
+    #loginPgae .desktopHeader,
+    #ProductType .desktopHeade {
+        display: none;
+    }
+
+    #loginPage .mobileHeader .innerLogo .logo img,
+    #ProductType .mobileHeader .innerLogo .logo img {
+        max-width: 171px;
+    }
+
+    #loginPage .loginHero {
+        background: var(--accent-color);
+        padding: 40px 0px 0px;
+        overflow: visible;
+        height: auto;
+        background: #1c1c1c;
+    }
+
+    #loginPage .loginHero .col-md-5 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    #loginPage .loginFormArea {
+        padding: 48px 10px 20px;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    #loginPage .loginHero .col-md-7 {
+        flex: 0 0 auto;
+        width: 0%;
+        display: none;
+    }
+
+    #loginPage .loginForm button.submitBtn {
+        margin: 26% auto 0;
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        width: 92%;
+    }
+
+    #loginPage .haveAnAccount {
+        position: unset !important;
+        width: 95%;
+    }
+
+    #loginPage .loginForm .forgot-password {
+        color: rgb(118, 148, 255);
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        justify-self: center;
+    }
+
+    /* Login page footer start */
+    #loginPage footer,
+    #ProductType footer {
+        display: none;
+    }
+
+    /* Login page footer close */
+    /* Login page close */
+    /* ************************************************* */
+}
+
+/* mini tablet close */
+
+
+/* Mobile responsive start */
+@media (max-width:767px) {
+
+    /* login page start */
+    #loginPage  .container,
+    #ProductType  .container {
+        max-width: 767px !important;
+        padding: 0px 10px !important;
+    }
+    #loginPage header,
+    #ProductType header{
+        box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.28);
+    }
+    .mobileHeader .row{
+        flex-wrap: nowrap;
+        overflow: hidden;
+        justify-content: space-between;
+        padding: 5px 0px;
+        
+    }
+    .mobileHeader .backBtn{
+        color: rgb(118, 148, 255);
+    }
+    .mobileHeader .backBtn:hover{
+        color: var(--submenu-hover-color);
+    }
+    #loginPage .mobileHeader .innerLogo .logo img,
+    #ProductType .mobileHeader .innerLogo .logo img {
+        max-width: 151px;
+    }
+    .mobileHeader .row .col-md-4{
+        width: 33%;
+    }
+    #loginPage .formTitle.text-center,
+    #ProductType .formTitle.text-center{
+        font-size: 22px;
+    }
+    #loginPage .formTitle.text-center br{
+        display: none;
+    }
+    #loginPage .innerLoginForm {
+        padding-top: 30px;
+    }
+    #loginPage .loginForm button.submitBtn {
+        margin: 26% auto 0;
+        position: absolute;
+        bottom: 90px;
+        left: 20px;
+        width: 90%;
+    }
+
+    #loginPage .haveAnAccount {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 95%;
+    }
+
+}
+
+/* Mobile responsive close */
